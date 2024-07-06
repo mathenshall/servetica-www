@@ -4,11 +4,16 @@
   "private": true,
   "scripts": {
     "build": "next build",
-    "dev": "sst dev next dev",
+    "dev": "AWS_PROFILE=servetica sst dev next dev",
     "lint": "next lint",
     "start": "next start"
   },
   "dependencies": {
+    "@chakra-ui/next-js": "^2.2.0",
+    "@chakra-ui/react": "^2.8.2",
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "framer-motion": "^11.2.12",
     "next": "14.2.4",
     "react": "^18",
     "react-dom": "^18",

@@ -1,6 +1,26 @@
-import "@/styles/globals.css";
+// pages/_app.js
 import type { AppProps } from "next/app";
 
-export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+import { ChakraProvider } from "@chakra-ui/react";
+
+import { fonts } from "../lib/fonts";
+import { theme } from "./theme";
+
+function ServeticaWwwApp({ Component, pageProps }: AppProps) {
+  return (
+    <>
+      <style jsx global>
+        {`
+          :root {
+            --font-montserrat: ${fonts.montserrat.style.fontFamily};
+          }
+        `}
+      </style>
+      <ChakraProvider theme={theme}>
+        <Component {...pageProps} />
+      </ChakraProvider>
+    </>
+  );
 }
+
+export default ServeticaWwwApp;
