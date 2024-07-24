@@ -1,4 +1,4 @@
-import { Montserrat, Roboto, Roboto_Mono } from "next/font/google";
+import { Montserrat, Roboto, Roboto_Mono, Oooh_Baby } from "next/font/google";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -16,8 +16,16 @@ const robotoMono = Roboto_Mono({
   subsets: ["latin"],
   variable: "--font-roboto-mono",
 });
+
+const oooBaby = Oooh_Baby({
+  weight: ["400"],
+  subsets: ["latin"],
+  variable: "--font-oooh_baby"
+})
+
 export const fonts = {
   montserrat,
   robotoLight,
   robotoMono,
+  oooBaby,
 };
